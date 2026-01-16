@@ -6,11 +6,9 @@
   <style>
 body {
   margin: 0;
-  background-image: url("background.png");
-  background-size: contain; /* thu ảnh lại */
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-color: #f5f5f5; /* nền phụ */
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
 }
 </style>
     }
@@ -40,11 +38,17 @@ body {
   background: rgba(255,255,255,0.7); /* mờ */
     }
   </style>
+  .hero-bg {
+  height: 60vh;              /* CHỈ chiếm 60% màn hình */
+  background-image: url("background.png");
+  background-size: contain;  /* KHÔNG phóng quá */
+  background-position: center;
+  background-repeat: no-repeat;
+}
 </head>
-
 <body>
-
 <header>
+  <div class="hero-bg"></div>
   <nav>
     <a href="index.html">Trang chủ</a>
     <a href="gioithieu.html">Giới thiệu</a>
