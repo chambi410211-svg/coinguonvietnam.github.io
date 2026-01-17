@@ -4,6 +4,83 @@
   <meta charset="UTF-8">
   <title>Lịch sử Việt Nam</title>
 </head>
+ <style>
+.hero {
+  height: 70vh;
+  background: url("background.png") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding-top: 120px;
+}
+</style>
+.menu {
+  display: flex;
+  justify-content: space-around;
+  background: #e0f2fe;
+  padding: 10px;
+}
+.menu button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+ <style>
+.content { display: none; padding: 20px; }
+.content.active { display: block; }
+.map-layout {
+  display: flex;
+  gap: 20px;
+}
+.map-box {
+  flex: 3;
+  height: 500px;
+  background: #e6f2ff;
+}
+.search-box {
+  flex: 1;
+  background: #f0f9ff;
+  padding: 10px;
+}
+</style>
 <body>
+ <header class="hero">
+  <h1>LỊCH SỬ VIỆT NAM</h1>
+  <p>Cội nguồn – Kháng chiến – Hòa bình</p>
+</header>
+<nav class="menu">
+  <button onclick="showSection('home')">Trang chủ</button>
+  <button onclick="showSection('intro')">Giới thiệu</button>
+  <button onclick="showSection('map')">Bản đồ</button>
+  <button onclick="showSection('method')">Phương pháp học</button>
+</nav><main>
+  <section id="home" class="content active">
+    <h2>Trang chủ</h2>
+    <p>Nội dung sẽ viết sau</p>
+  </section>
+  <section id="intro" class="content">
+    <h2>Giới thiệu</h2>
+  </section>
+  <section id="map" class="content">
+    <h2>Bản đồ lịch sử</h2>
+    <div class="map-layout">
+      <div class="map-box">
+        (Bản đồ Việt Nam để ở đây)
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Tìm trận chiến...">
+      </div>
+    </div>
+  </section>
+  <section id="method" class="content">
+    <h2>Phương pháp học</h2>
+  </section>
+</main><script>
+function showSection(id) {
+  document.querySelectorAll('.content').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
 </body>
 </html>
