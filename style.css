@@ -3,9 +3,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-/* TRANG CHỦ (BACKGROUND NHỎ LẠI) */
+/* ===== BACKGROUND TRANG CHỦ ===== */
 .hero {
-  height: 60vh; /* 👈 QUAN TRỌNG: chỉ chiếm 60% màn hình */
+  height: 60vh;                /* background nhỏ lại */
   background-image: url("background.png");
   background-size: cover;
   background-position: center;
@@ -18,36 +18,52 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  color: black;
 }
-/* MENU */
+.hero-text h1 {
+  font-size: 64px;
+  margin: 0;
+}
+.hero-text h2 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+.hero-text h3 {
+  font-size: 36px;
+  margin: 0;
+}
+/* ===== MENU ===== */
 nav {
-  background: #0d47a1;
-  padding: 10px;
-  text-align: center;
+  background: #2c6ed5; /* xanh dương nhẹ */
+  display: flex;
+  justify-content: center;
 }
 nav a {
   color: white;
-  margin: 0 15px;
+  padding: 15px 25px;
   text-decoration: none;
   font-weight: bold;
 }
-/* BẢN ĐỒ */
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+/* ===== KHU BẢN ĐỒ ===== */
 .map-section {
   padding: 40px;
-  background: #f5f5f5;
+  background: #f5f7fb;
+  text-align: center;
 }
+.map-section h2 {
+  margin-bottom: 20px;
+}
+/* KHUNG BẢN ĐỒ */
 .map-container {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  max-width: 900px;
+  margin: auto;
 }
-/* SVG MAP */
+/* SVG */
 .map-container object {
-  width: 60%;
+  width: 100%;
   height: auto;
-}
-/* SEARCH */
-.search-box input {
-  width: 250px;
-  padding: 10px;
+  border: 1px solid #ccc;
 }
