@@ -1,1 +1,53 @@
-
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+/* TRANG CHỦ (BACKGROUND NHỎ LẠI) */
+.hero {
+  height: 60vh; /* 👈 QUAN TRỌNG: chỉ chiếm 60% màn hình */
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+/* CHỮ TRÊN BACKGROUND */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* MENU */
+nav {
+  background: #0d47a1;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* BẢN ĐỒ */
+.map-section {
+  padding: 40px;
+  background: #f5f5f5;
+}
+.map-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+/* SVG MAP */
+.map-container object {
+  width: 60%;
+  height: auto;
+}
+/* SEARCH */
+.search-box input {
+  width: 250px;
+  padding: 10px;
+}
